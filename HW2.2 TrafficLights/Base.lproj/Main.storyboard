@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,75 +13,87 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HW2_2_TrafficLights" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="2By-sx-Ara">
-                                <rect key="frame" x="169.5" y="311.5" width="75" height="273"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGo-Ww-Jz8">
+                                <rect key="frame" x="80" y="400" width="160" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6pg-2Q-UQ5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="ik6-d8-zhf"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start" cornerStyle="large">
+                                    <backgroundConfiguration key="background"/>
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="colorChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uDh-PT-LOx"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MYm-lq-eun">
+                                <rect key="frame" x="110" y="86" width="100" height="264"/>
                                 <subviews>
-                                    <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkN-Dv-WNJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQa-AX-QW2">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="88"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="4hI-Eh-obK"/>
-                                            <constraint firstAttribute="width" constant="75" id="IeJ-fi-Utx"/>
+                                            <constraint firstAttribute="width" constant="100" id="L1L-2d-xQ5"/>
+                                            <constraint firstAttribute="height" constant="88" id="eDl-7O-4ON"/>
                                         </constraints>
                                     </view>
-                                    <view clearsContextBeforeDrawing="NO" alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seO-pX-XsM">
-                                        <rect key="frame" x="0.0" y="99" width="75" height="75"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRY-jj-naE">
+                                        <rect key="frame" x="0.0" y="88" width="100" height="88"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="4Rq-x0-NX9"/>
-                                            <constraint firstAttribute="width" constant="75" id="Erd-Oc-lfb"/>
+                                            <constraint firstAttribute="width" constant="100" id="e5Z-6Q-E66"/>
+                                            <constraint firstAttribute="height" constant="88" id="laU-AP-iHE"/>
                                         </constraints>
                                     </view>
-                                    <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BW1-uS-8u5">
-                                        <rect key="frame" x="0.0" y="198" width="75" height="75"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMP-ZL-duO">
+                                        <rect key="frame" x="0.0" y="176" width="100" height="88"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="WP4-IS-UFB"/>
-                                            <constraint firstAttribute="height" constant="75" id="eIV-2Y-76n"/>
+                                            <constraint firstAttribute="width" constant="100" id="pfY-ZO-Iu7"/>
+                                            <constraint firstAttribute="height" constant="88" id="pmV-Xp-Eoa"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpF-Vs-s77">
-                                <rect key="frame" x="147" y="84" width="120" height="40"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ApL-zg-pUq"/>
-                                    <constraint firstAttribute="height" constant="40" id="nDj-bu-CSu"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="large"/>
-                                <connections>
-                                    <action selector="changeColorTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jas-pI-pbj"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="png-clipart-traffic-light-computer-icons-traffic-light-monochrome-street-light-PhotoRoom" translatesAutoresizingMaskIntoConstraints="NO" id="iA4-Mv-eXY">
+                                <rect key="frame" x="10" y="56.5" width="300" height="327"/>
+                            </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="jk5-0L-0wQ"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HpF-Vs-s77" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9hf-oD-6cW"/>
-                            <constraint firstItem="2By-sx-Ara" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="COn-HF-c7P"/>
-                            <constraint firstItem="2By-sx-Ara" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KkG-eL-Atq"/>
-                            <constraint firstItem="HpF-Vs-s77" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="WUW-Ra-6Ny"/>
+                            <constraint firstItem="MYm-lq-eun" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-22" id="0fI-i8-ZKJ"/>
+                            <constraint firstAttribute="bottom" secondItem="hGo-Ww-Jz8" secondAttribute="bottom" constant="20" id="Qyd-K6-rOF"/>
+                            <constraint firstItem="iA4-Mv-eXY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Shy-dE-wsA"/>
+                            <constraint firstItem="hGo-Ww-Jz8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TNe-F2-PrX"/>
+                            <constraint firstItem="iA4-Mv-eXY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-20" id="rhn-bI-FzZ"/>
+                            <constraint firstItem="MYm-lq-eun" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uuB-51-4KV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="changeColorButton" destination="HpF-Vs-s77" id="Mlc-lw-Elo"/>
-                        <outletCollection property="trafficLights" destination="qkN-Dv-WNJ" collectionClass="NSMutableArray" id="z5n-ff-wz0"/>
-                        <outletCollection property="trafficLights" destination="seO-pX-XsM" collectionClass="NSMutableArray" id="AUA-62-Fdd"/>
-                        <outletCollection property="trafficLights" destination="BW1-uS-8u5" collectionClass="NSMutableArray" id="lw2-6c-Foj"/>
+                        <outlet property="changeColorButton" destination="hGo-Ww-Jz8" id="lI7-kN-hiy"/>
+                        <outletCollection property="trafficLights" destination="SQa-AX-QW2" collectionClass="NSMutableArray" id="Cra-iP-gJN"/>
+                        <outletCollection property="trafficLights" destination="xRY-jj-naE" collectionClass="NSMutableArray" id="cUZ-Gi-vF5"/>
+                        <outletCollection property="trafficLights" destination="GMP-ZL-duO" collectionClass="NSMutableArray" id="99v-BB-P5h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+            <point key="canvasLocation" x="18.22429906542056" y="92.656587473002162"/>
         </scene>
     </scenes>
     <resources>
+        <image name="png-clipart-traffic-light-computer-icons-traffic-light-monochrome-street-light-PhotoRoom" width="300" height="326.66665649414062"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
